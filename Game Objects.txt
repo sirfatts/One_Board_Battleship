@@ -1,0 +1,11 @@
+Cell/Space
+An individual space on the board, contains information about whether or not a shot has been fired here and what ships are on this space.
+
+Board
+An array of arrays of Spaces, represents the game board. Will be serializable to allow transmission.
+
+Game
+Contains main game logic, acts as an interface to perform the actual moves.
+
+Ship
+An individual ship on the board. Will mainly act as a holder of how much health a ship has (i.e. how many spaces of it havenÅft been hit), so it can be reported when the ship has been sunk.
