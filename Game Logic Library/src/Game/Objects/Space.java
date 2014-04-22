@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Space {
     
-    private int x;
+    private char x;
     private int y;
     private ArrayList<Ship> ships;
     
@@ -15,7 +15,7 @@ public class Space {
         this.ships = new ArrayList<>();
     }
     
-    public Space(int x, int y)
+    public Space(char x, int y)
     {
         this.x = x;
         this.y = y;
@@ -25,7 +25,7 @@ public class Space {
     @Override
     public String toString()
     {
-        return Integer.toString(this.x) + Integer.toString(this.y);
+        return Character.toString(this.x) + Integer.toString(this.y);
     }
     
 }
