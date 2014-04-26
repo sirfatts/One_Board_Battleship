@@ -22,6 +22,11 @@ public class Space {
         this.ships = new ArrayList<>();
     }
     
+    public void addShip(Ship s)
+    {
+        this.ships.add(s);
+    }
+    
     @Override
     public String toString()
     {

@@ -42,4 +42,41 @@ public class Board {
         }
     }
     
+    public boolean addShip(String topLeft, boolean vertical, int size, Ship s)
+    {
+        Character x = topLeft.charAt(0);
+        Integer y = Integer.getInteger(topLeft.substring(1));
+        
+        if(!this.spaces.containsKey(topLeft))
+        {
+            return false;
+        }            
+        if(x + size > 'J')
+        {
+            return false;
+        }
+        if(y + size > 10)
+        {
+            return false;
+        }
+        
+        //If vertical
+        if(vertical)
+        {
+            for(int i = y; i < y + size; i++)
+            {
+                this.getSpace(x, i).addShip(s);
+            }
+        }
+        //Otherwise is horizontal
+        else
+        {
+            for(char i = x; i < x + size; i++)
+            {
+                this.getSpace(i, y).addShip(s);
+            }
+        }
+        
+        return true;
+    }
 }
